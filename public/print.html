@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reporte de premios ganados</title>
+    <link rel="stylesheet" href="print.css" />
+    <script defer src="print.js"></script>
+  </head>
+  <body>
+    <header class="print-header">
+      <div>
+        <p class="kicker">Ruleta de Premios</p>
+        <h1>Historial de premios ganados</h1>
+        <p class="note">Fuente: data/premios_ganados.csv</p>
+      </div>
+      <button id="print-now" class="btn">Imprimir</button>
+    </header>
+    <main>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>ID</th>
+              <th>Premio</th>
+              <th>Descripción</th>
+              <th>Valor</th>
+              <th>Fecha/Hora</th>
+            </tr>
+          </thead>
+          <tbody id="print-body">
+            <tr>
+              <td colspan="6" class="muted">Cargando premios...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

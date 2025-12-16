@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruleta HACS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="brand-slot">
+          <img src="logo.png" alt="Logo Hospital Angeles Centro Sur" class="brand-logo" />
+        </div>
+        <div>
+          <p class="kicker">Sorteo HA Centro Sur</p>
+          <h1>RULETA DE PREMIOS NAVIDEÑOS</h1>
+          <p class="lede">
+            Presiona enter y descubre el siguiente premio.
+          </p>
+        </div>
+      </header>
+      <div class="visually-hidden" aria-live="polite" aria-atomic="true">
+        <div id="selected-name">--</div>
+        <div id="selected-details">ID -- · Valor --</div>
+        <div id="status-message"></div>
+      </div>
+
+      <section class="slot-and-actions">
+        <div class="slot-window" aria-label="Ventana de ruleta" aria-live="polite">
+          <ul id="slot-strip" class="slot-strip">
+            <li class="slot-item">Listo para girar</li>
+            <li class="slot-item">Premios cargados</li>
+            <li class="slot-item highlight">--</li>
+            <li class="slot-item">Listo para girar</li>
+            <li class="slot-item">Premios cargados</li>
+          </ul>
+          <div class="slot-center"></div>
+        </div>
+        <div class="controls">
+          <button id="spin-btn" class="btn primary">Girar ruleta</button>
+          <button id="toggle-history-btn" class="btn ghost">Historial</button>
+          <button id="print-btn" class="btn ghost">Imprimir</button>
+          <label class="switch" aria-label="Cambiar modo navideño">
+            <input id="theme-toggle" type="checkbox" />
+            <span class="switch-track">
+              <span class="switch-thumb"></span>
+            </span>
+            <span class="switch-label">Modo navideño</span>
+          </label>
+        </div>
+        <p id="availability-msg" class="availability-msg"></p>
+      </section>
+
+      <section id="history-panel" class="history hidden">
+        <div class="history-header">
+          <h2>Premios ganados</h2>
+          <span id="history-count" class="badge">0</span>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Premio</th>
+                <th>Descripcion</th>
+                <th>Valor</th>
+                <th>Fecha/Hora</th>
+              </tr>
+            </thead>
+            <tbody id="history-body">
+              <tr>
+                <td colspan="6" class="muted">Aun no hay premios registrados.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <div id="prize-overlay" class="prize-overlay hidden" role="dialog" aria-modal="true">
+      <div class="overlay-backdrop"></div>
+      <div class="overlay-card">
+        <button id="overlay-close" class="overlay-close" aria-label="Cerrar premio">x</button>
+        <p class="overlay-kicker">Premio seleccionado</p>
+        <h2 id="overlay-name" class="overlay-name">Premio</h2>
+        <p id="overlay-details" class="overlay-details">ID</p>
+        <p id="overlay-desc" class="overlay-desc">Descripcion</p>
+      </div>
+    </div>
+    <span aria-hidden="true" class="signature-mark">M01S3S - HACS</span>
+  </body>
+</html>

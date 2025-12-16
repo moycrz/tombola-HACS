@@ -1,0 +1,15 @@
+{
+  "name": "ruleta-premios-local",
+  "version": "1.0.0",
+  "description": "Ruleta de premios local con Node.js, Express y archivos CSV como fuente de datos.",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "csv-stringify": "^6.5.2",
+    "express": "^4.19.2"
+  }
+}

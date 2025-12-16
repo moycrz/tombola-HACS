@@ -1,0 +1,4 @@
+node_modules
+npm-debug.log*
+db/tombola.db
+.DS_Store

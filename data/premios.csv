@@ -1,0 +1,145 @@
+id,nombre,descripcion
+1,Microondas,Whirlpool
+2,Microondas,Hamilton Beach
+3,"Pantalla 32""",RCA
+4,"Pantalla 40""",Hisense
+5,Licuadora powermix,T-fal
+6,Horno electrico,ATVIO
+7,Horno electrico,ATVIO
+8,Olla express 6L,EKCO
+9,Cafetera 5 tazas,Oster
+10,Cafetera 5 tazas,Oster
+11,Cafetera 7 tazas,T-fal
+12,Cafetera Individual,Taurus
+13,Freidora de aire 4L,Oster
+14,Juego de servicio multiusos 12 pzas,Pyrorey
+15,Juego de hornear de vidrio 6 pzas,Libbey
+16,Vajilla 12 pzas,Vajillas corona
+17,Celular Moto g06,Motorola
+18,Tazones de vidrio con tapa 8 pzas,Libbey
+19,Bocina portatil TWS,MISIK
+20,Tazones de vidrio con tapa 10 pzas,Libbey
+21,Cafetera 12 tazas,Hamilton Beach
+22,Plancha de vapor,Oster
+23,Cafetera Heliora 6 tazas,T-fal
+24,Rotomartillo,Trupper
+25,Sandwichera Compacta,Oster
+26,Bocina,Billboard
+27,Aspiradora para auto,HighSierra
+28,Aspiradora para auto,HighSierra
+29,Batidora Bake Easy,T-fal
+30,Prensa para paninis,Hamilton Beach
+31,Tetera Digital,Sur la table
+32,Tostador rosa,Taurus
+33,Plancha multiusos,Oster
+34,Juego de hornear de vidrio 8 pzas,Pyrorey
+35,Licuadora con acople metalico,Oster
+36,Cafetera de espresso y capuchino,Hamilton Beach
+37,Licuadora 1.5L,Chefman
+38,Recipientes de vidrio con tapa 12 pzas,Libbey
+39,Exprimidor Citricos 1 Litro,Black + Decker
+40,Echo Pop,Alexa
+41,Audifonos Sport,Mitzu
+42,Audifonos Sport,Mitzu
+43,Cafetera 12 tazas,Oster
+44,Bocina BT 180,Vorago
+45,Frost Platon de vidrio,Libbey
+46,Tarros de vidrio 4 pzas,Crisa
+47,Juego de vasos de Vidrio 8 pzas,Libbey
+48,Juego de vasos de Vidrio 8 pzas,Libbey
+49,Set de contenedores hermeticos 20 pzas,Members Mark
+50,Set de contenedores hermeticos 20 pzas,Members Mark
+51,Recipientes de ceramica con tapa 6 pzas,Gourmet Express
+52,Procesador de alimentos ,Black + Decker
+53,Juego de bandejas 3 pzas,Pyrorey
+54,Difusor de aroma,Life & Care
+55,Contenedores hermeticos 5 pzas,AG
+56,Licuadora 6 velocidades,American
+57,Parrilla compacta,T-fal
+58,Juego de vasos de Vidrio 16 pzas,Member�s choice
+59,Batidora de Inmersion,Hamilton Beach
+60,Calentador,Honeywell
+61,Tetera Digital,Master Chef
+62,Tetera Digital,Master Chef
+63,Cafetera,
+64,Cafetera,
+65,Exprimidor,
+66,Exprimidor,
+67,Exprimidor,
+68,Exprimidor,
+69,Batidora,Hamilton Beach
+70,Plancha de vapor,Oster
+71,Plancha de vapor,Oster
+72,Plancha de vapor,Oster
+73,Licuadora,Hamilton Beach
+74,Licuadora,Hamilton Beach
+75,Licuadora,Hamilton Beach
+76,Mini Master Chef,
+77,Mini Master Chef,
+78,Vaporizador,Hamilton Beach
+79,Licuadora,
+80,Licuadora,
+81,Sarten Odiseo,Taurus
+82,Audifonos,Select Sound
+83,Audifonos,Select Sound
+84,Barra de Sonido,Select Sound
+85,Vaporera,
+86,Aspiradora VCA-1300,
+87,Freidora,Chefman
+88,"Pantalla 70""",Daewoo
+89,"Pantalla 70""",Daewoo
+90,"Pantalla 55""",TCL
+91,"Pantalla 55""",TCL
+92,Batidora ,Taurus
+93,Batidora ,Taurus
+94,Audifonos,Select Sound
+95,Audifonos,Select Sound
+96,Audifonos,Select Sound
+97,Audifonos,Select Sound
+98,Sandwichera Grill,
+99,Sandwichera Grill,
+100,Asador Fagus,Fagus
+101,Asador Fagus,Fagus
+102,Sarten Masterchef,Master Chef
+103,Sandwichera,
+104,Sandwichera,
+105,Bateria de cocina,Ilko
+106,Vajilla 12 piezas,Gibson
+107,Vajilla 12 piezas,Libbey
+108,Bateria de cocina,Vasconia
+109,Vajilla,T&A Home
+110,Alaciadora,
+111,Alaciadora,
+112,Alaciadora,
+113,Alaciadora,
+114,Alaciadora,
+115,Secadora,Conair
+116,Secadora,Conair
+117,Secadora,Conair
+118,Set Golden Hills,Golden Hills
+119,Set Golden Hills,Golden Hills
+120,Arrocera,Hamilton Beach
+121,Botanero,Gibson
+122,Botanero,Gibson
+123,Vasos,Gibson
+124,Bocina Tower Fest,STF
+125,Licuadora 4x,Oster
+126,Licuadora One Touch,Oster
+127,Sandwichera,Hamilton Beach
+128,Sandwichera,Hamilton Beach
+129,Tetera Digital,Mr. Coffee
+130,Licuadora,Taurus
+131,Juego Cacerolas de vidrio,Pyrorey
+132,Microondas,Midea
+133,Freidora de aire,Chefman
+134,Licuadora Verde,Mill Grater
+135,Cafetera,Oster
+136,Pinguino Cafetera,
+137,Juego de bandejas,
+138,Licuadora,Oster
+139,Ensaladera,
+140,Microondas ,Hamilton Beach
+141,Termo Plastico Naranja,
+142,Mini Picadora,Oster
+143,Licuadora Personal,Hamilton Beach
+144,Juguera,T-fal
