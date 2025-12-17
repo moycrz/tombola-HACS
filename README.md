@@ -57,3 +57,19 @@ echo "id,nombre,descripcion,valor,fechaHora" > data/premios_ganados.csv
 - Fuentes de datos: solo CSV en `data/`; no hay BD ni llamadas externas.
 - Scripts disponibles:
   - `npm start` — inicia el servidor en `3000` (usa `PORT` para cambiarlo).
+
+## Docker
+- Construir la imagen:
+  ```bash
+  docker build -t tombola-hacs .
+  ```
+- Ejecutar montando la carpeta `data` para persistir los CSV:
+  - Windows (PowerShell):
+    ```powershell
+    docker run --rm -p 3000:3000 -v "$PWD/data:/app/data" tombola-hacs
+    ```
+  - macOS/Linux:
+    ```bash
+    docker run --rm -p 3000:3000 -v "$(pwd)/data:/app/data" tombola-hacs
+    ```
+- La app quedará en `http://localhost:3000`. Si cambias el puerto, usa `-p <host_port>:3000` o exporta `PORT` dentro del contenedor.
