@@ -1,12 +1,12 @@
 # Ruleta de Premios Local
 
-Aplicación local (sin internet) que sirve una ruleta tipo tragamonedas. Los premios se leen y escriben desde archivos CSV: no hay base de datos ni dependencias externas.
+Aplicacion local (sin internet) que sirve una ruleta tipo tragamonedas. Los premios se leen y escriben desde archivos CSV: no hay base de datos ni dependencias externas.
 
 ## Requisitos
-- Node.js 18 o superior.
-- npm (incluido con Node).
+- Node.js 18 o superior
+- npm (incluido con Node)
 
-## Instalación y uso
+## Instalacion y uso
 1) Instala dependencias:
 ```bash
 npm install
@@ -23,7 +23,7 @@ La app queda en http://localhost:3000 y sirve el frontend desde `public/`.
 - La disponibilidad se calcula como `premios.csv` menos los IDs presentes en `premios_ganados.csv`.
 
 ### Editar `data/premios.csv`
-- Mantén los encabezados; IDs deben ser únicos.
+- Mantener los encabezados; IDs deben ser unicos.
 - Puedes editar con Excel/Numbers o un editor de texto. Guarda siempre en CSV (UTF-8).
 - Ejemplo de fila: `P016,Termo personalizado,Acero con tapa hermetica,280`
 
@@ -41,25 +41,25 @@ echo "id,nombre,descripcion,valor,fechaHora" > data/premios_ganados.csv
 ```
 
 ## Funcionalidad
-- Botón **Girar ruleta**: el backend elige un premio disponible y lo marca como usado en `premios_ganados.csv`. No se repiten IDs.
+- Boton **Girar ruleta**: el backend elige un premio disponible y lo marca como usado en `premios_ganados.csv`. No se repiten IDs.
 - Historial: tabla en pantalla leyendo `premios_ganados.csv`.
-- Imprimir: botón **Imprimir** abre `public/print.html` con el reporte listo para `window.print()`.
-- Cuando se acaban los premios, el botón de giro se deshabilita y se muestra un aviso.
+- Imprimir: boton **Imprimir** abre `public/print.html` con el reporte listo para `window.print()`.
+- Cuando se acaban los premios, el boton de giro se deshabilita y se muestra un aviso.
 
 ## Endpoints
-- `GET /api/premios` → premios disponibles.
-- `POST /api/girar` → selecciona un premio aleatorio disponible, lo registra en `premios_ganados.csv` y lo devuelve.
-- `GET /api/ganados` → historial de premios ganados.
-- `GET /print` → reporte imprimible.
+- `GET /api/premios`: premios disponibles.
+- `POST /api/girar`: selecciona un premio aleatorio disponible, lo registra en `premios_ganados.csv` y lo devuelve.
+- `GET /api/ganados`: historial de premios ganados.
+- `GET /print`: reporte imprimible.
 
-## Notas técnicas
-- Concurrencia: `POST /api/girar` está protegido con un lock en memoria para evitar dobles escrituras si se presiona rápido.
+## Notas tecnicas
+- Concurrencia: `POST /api/girar` esta protegido con un lock en memoria para evitar dobles escrituras si se presiona rapido.
 - Fuentes de datos: solo CSV en `data/`; no hay BD ni llamadas externas.
 - Scripts disponibles:
-  - `npm start` — inicia el servidor en `3000` (usa `PORT` para cambiarlo).
+  - `npm start`: inicia el servidor en `3000` (usa `PORT` para cambiarlo).
 
-## Docker
-- Construir la imagen:
+## Docker y Docker Compose
+- Construir la imagen manualmente:
   ```bash
   docker build -t tombola-hacs .
   ```
@@ -72,4 +72,12 @@ echo "id,nombre,descripcion,valor,fechaHora" > data/premios_ganados.csv
     ```bash
     docker run --rm --name tombola-hacs -p 3000:3000 -v "$(pwd)/data:/app/data" tombola-hacs
     ```
-- La app quedará en `http://localhost:3000`. Si cambias el puerto, usa `-p <host_port>:3000` o exporta `PORT` dentro del contenedor.
+- Docker Compose (autoarranque):
+  ```bash
+  docker compose up -d
+  ```
+  - Detener: `docker compose down`
+  - Logs: `docker compose logs -f`
+  - Rebuild al cambiar codigo: `docker compose build --no-cache` y luego `docker compose up -d`
+  - El servicio usa `restart: always`, asi que tras reiniciar Windows se levantara solo, siempre que Docker Desktop/Engine arranque al inicio. Ajusta el puerto editando `ports` en `docker-compose.yml` o exportando `PORT`.
+- La app queda en `http://localhost:3000`. Si cambias el puerto, usa `-p <host_port>:3000` o modifica `PORT` dentro del contenedor.
