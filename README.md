@@ -66,10 +66,10 @@ echo "id,nombre,descripcion,valor,fechaHora" > data/premios_ganados.csv
 - Ejecutar montando la carpeta `data` para persistir los CSV:
   - Windows (PowerShell):
     ```powershell
-    docker run --rm -p 3000:3000 -v "$PWD/data:/app/data" tombola-hacs
+    docker run --rm --name tombola-hacs -p 3000:3000 -v "${PWD}/data:/app/data" tombola-hacs
     ```
   - macOS/Linux:
     ```bash
-    docker run --rm -p 3000:3000 -v "$(pwd)/data:/app/data" tombola-hacs
+    docker run --rm --name tombola-hacs -p 3000:3000 -v "$(pwd)/data:/app/data" tombola-hacs
     ```
 - La app quedará en `http://localhost:3000`. Si cambias el puerto, usa `-p <host_port>:3000` o exporta `PORT` dentro del contenedor.
